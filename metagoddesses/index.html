@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>casimetagod</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add the CSS code here */
+    .image-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
+
+  .image-popup img {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid;
+    border-image: linear-gradient(to right top, #f403d1, #c565f8, #918bff, #68a4ff, #64b5f6);
+    border-image-slice: 1;
+  }
+
+  .image-popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="image/logo-01.png" class="logo">
+      <nav>
+        <ul>
+          <!-- <li><a href="">HOME</a></li> -->
+        </ul>
+      </nav>
+      <!-- <img src="image/menu.png" class="menu-icon"> -->
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1>Metaverse Goddesses</h1>
+        <p>Four Goddesses of ancient mythology come alive in the metaverse to smoothen, uncomplicate, enrich and wow our lives with love, beauty, justice, health, and wisdom. Defining the future of AI, CASI avatars deliver the best metaverse of human imagination. The internet will never be the same.</p>
+        <button type="button">Explore</button>
+      </div>
+      <div class="col">
+        <div class="card card1" onclick="showImage('image/casi_avatars/CASI_Model_Theme_3.png', 'CASI  VENUS  AVATAR')">
+          <h5>CASI VENUS</h5>
+        </div>
+        <div class="card card2" onclick="showImage('image/casi_avatars/CASI_Doctor_Theme_3.png', 'CASI  HYGEIA  AVATAR')">
+          <h5>CASI HYGEIA</h5>
+        </div>
+        <div class="card card3" onclick="showImage('image/casi_avatars/CASI_Emp_Theme_1.png', 'CASI  ATHENA  AVATAR')">
+          <h5>CASI ATHENA</h5>
+        </div>
+        <div class="card card4" onclick="showImage('image/casi_avatars/CASI_Justicia_theme_3.png', 'CASI  JUSTITIA  AVATAR')">
+          <h5>CASI JUSTITIA</h5>
+        </div>
+      </div>
+    </div>
+    <div id="imagePopup" class="image-popup">
+      <span class="close" onclick="hideImage()">&times;</span>
+      <img id="popupImage" src="" alt="Popup Image">
+      <p id="popupText"></p>
+    </div>
+    <script>
+      // JavaScript code here
+      const popup = document.getElementById("imagePopup");
+      const popupImage = document.getElementById("popupImage");
+      const popupText = document.getElementById("popupText");
+
+      function showImage(imageUrl, description) {
+        popupImage.src = imageUrl;
+        popupText.textContent = description;
+        popup.style.display = "block";
+      }
+
+      function hideImage() {
+        popup.style.display = "none";
+      }
+    </script>
+  </div>
+</body>
+</html>
