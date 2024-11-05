@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(image/BG.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 110px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  margin: 10px;
+  flex-basis: 80%;
+}
+
+h1 {
+  margin: 10px;
+  color: white;
+  font-size: 50px;
+}
+
+p {
+  margin: 10px;
+  color: white;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+button {
+  width: 180px;
+  color: #000;
+  font-size: 15px;
+  padding: 12px 0;
+  background-image: linear-gradient(to right top, #f403d1, #c565f8, #918bff, #68a4ff, #64b5f6);
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+}
+
+.card {
+  width: 230px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 15px 15px;
+  background-color: #64b4f63b;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.card1 {
+  background-image: url(image/casi_avatars/CASI_Model_Theme_3.png);
+}
+
+.card2 {
+  background-image: url(image/casi_avatars/CASI_Doctor_Theme_3.png);
+}
+
+.card3 {
+  background-image: url(image/casi_avatars/CASI_Emp_Theme_1.png);
+}
+
+.card4 {
+  background-image: url(image/casi_avatars/CASI_Justicia_theme_3.png);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 4px solid;
+  border-image: linear-gradient(to right top, #f403d1, #c565f8, #918bff, #68a4ff, #64b5f6);
+  border-image-slice: 1;
+  border-radius: 10px;
+}
+
+
+h5 {
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: none; /* Hide the h5 text by default */
+  position: absolute; /* Position the h5 text within the card */
+  left: 0;
+  right: 0;
+  bottom: 10px; /* Adjust the bottom position as needed */
+  margin: 0;
+}
+.card h5 {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.421);
+  
+}
+.card:hover h5 {
+  display: block; /* Show the h5 text on hover */
+}
+
+.card:hover h5:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+p1 {
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+}
